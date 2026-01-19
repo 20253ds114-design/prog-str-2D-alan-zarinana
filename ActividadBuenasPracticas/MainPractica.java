@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class MainPractica {
     public static void main(String[] args) {
         int numeroLimite = pedirEntero();
         int resultadoSuma = sumarHastaN(numeroLimite);
