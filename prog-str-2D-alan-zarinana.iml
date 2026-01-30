@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/ActividadBuenasPracticas" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/practicaexamen" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ControlIfElseAlanZarinana" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ControlSwitchAlanZarinana/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
