@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Alumnosreportes/Alumnosreportes.iml" filepath="$PROJECT_DIR$/Alumnosreportes/Alumnosreportes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ApuntesdeHerenciayPolimorfismo/ApuntesdeHerenciayPolimorfismo.iml" filepath="$PROJECT_DIR$/ApuntesdeHerenciayPolimorfismo/ApuntesdeHerenciayPolimorfismo.iml" />
       <module fileurl="file://$PROJECT_DIR$/ControlCalificaciones/ControlCalificaciones.iml" filepath="$PROJECT_DIR$/ControlCalificaciones/ControlCalificaciones.iml" />
       <module fileurl="file://$PROJECT_DIR$/CotizadorDeEnvioconClases/CotizadorDeEnvioconClases.iml" filepath="$PROJECT_DIR$/CotizadorDeEnvioconClases/CotizadorDeEnvioconClases.iml" />
       <module fileurl="file://$PROJECT_DIR$/MenuConversionAlanZarinana.java/MenuConversionAlanZarinana.java.iml" filepath="$PROJECT_DIR$/MenuConversionAlanZarinana.java/MenuConversionAlanZarinana.java.iml" />
