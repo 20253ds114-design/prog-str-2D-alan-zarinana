@@ -9,8 +9,12 @@
       <sourceFolder url="file://$MODULE_DIR$/practicaexamen" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ControlIfElseAlanZarinana" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ControlSwitchAlanZarinana/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/demo/src/main/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:win:21.0.6" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:win:21.0.6" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:win:21.0.6" level="project" />
   </component>
 </module>
