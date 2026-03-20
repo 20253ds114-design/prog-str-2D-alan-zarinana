@@ -27,6 +27,9 @@ public class AppController {
 
     @FXML
     private TextField txtEdad;
+    @FXML
+    private TextField busqueda;
+
 
 
     // Se mantiene como final para proteger la referencia de la lista observable
@@ -51,6 +54,11 @@ public class AppController {
                     loadDataToForm(newValue); //String con el valor del row 0 test-email@gmail.com-18
                 }
         );
+        busqueda.textProperty().addListener((observable, oldValue, newValue) -> {
+            System.out.println("Text field changed from " + oldValue + " to " + newValue);
+            loadFromFilebusqueda(newValue);
+            // Add your custom logic here (e.g., validation, updating other UI elements)
+        });
     }
 
     @FXML
@@ -110,6 +118,22 @@ public class AppController {
 
     }
 
+    @FXML
+    private void OnDelete(){
+        int index = listView.getSelectionModel().getSelectedIndex();
+        try {
+            service.deletePerson(index);
+            loadFromFile();
+            lblMsg.setText("Persona eliminada exitosamente");
+            lblMsg.setStyle("-fx-text-fill: green");
+            txtName.clear();
+            txtEmail.clear();
+            txtEdad.clear();
+        } catch (IOException e) {
+            lblMsg.setText(e.getMessage());
+            lblMsg.setStyle("-fx-text-fill: red");
+        }
+    }
 
 
     @FXML
@@ -140,6 +164,36 @@ public class AppController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void loadFromFilebusqueda(String busqueda) {
+        try {
+            // Obtenemos la lista desde el servicio
+            List<String> items = service.loadDataforListbusqueda(busqueda);
+
+            // Actualizamos la lista observable (esto refresca el ListView automáticamente)
+            if (items != null) {
+                data.setAll(items);
+            }
+
+
+            if (lblMsg != null) {
+                lblMsg.setText("Datos cargados exitosamente");
+                lblMsg.setStyle("-fx-text-fill: green;");
+            }
+
+        } catch (IOException e) {
+            // Manejo de error si el archivo no existe o no se puede leer
+            if (lblMsg != null) {
+                lblMsg.setText("Error: " + e.getMessage());
+                lblMsg.setStyle("-fx-text-fill: red;");
+            }
+
+            // Imprimir el error en consola para depuración
+            e.printStackTrace();
+        }
+    }
+
 
     private void loadDataToForm(String item){
         String[] parts = item.split("-");

@@ -34,6 +34,30 @@ public class PersonService {
         return result;
     }
 
+    public List<String> loadDataforListbusqueda(String textoBuscar) throws IOException {
+        List<String> lines = repo.readAllLines();
+        List<String> result = new ArrayList<>();
+
+        for (String line : lines) {
+            if (line == null || line.isBlank()) continue;
+
+            String[] parts = line.split(",", -1);
+
+            String name = parts[0].trim();
+            String correo = parts[1].trim();
+            if(!correo.contains(textoBuscar)) continue;
+
+            String edad = "Sin edad";
+
+            if (parts.length > 2) {
+                edad = parts[2].trim();
+            }
+
+            result.add(name + " - " + correo + " - " + edad);
+        }
+
+        return result;
+    }
     public void addPerson(String name, String email,int edad) throws IOException {
         validatePerson(name, email,edad);
         String Name= name.replace(",","");
@@ -42,6 +66,12 @@ public class PersonService {
         repo.appendNewLine(Name+","+emailNoComa+","+edadComa);
     }
 
+    public void deletePerson(int index) throws IOException {
+        List<String> lines = getAllCleanLines();
+        lines.remove(index);
+        repo.appendAllLines(lines);
+
+    }
 
     public void updatePerson(int index, String name, String email, String edad) throws IOException {
         List<String> lines = getAllCleanLines();

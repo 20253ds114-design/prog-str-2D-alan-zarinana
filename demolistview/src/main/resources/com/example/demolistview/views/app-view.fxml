@@ -6,6 +6,7 @@
 <VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demolistview.controllers.AppController">
     <children>
         <Label text="Listado de personas" />
+        <TextField fx:id="busqueda"  />
 
         <GridPane>
             <columnConstraints>
@@ -36,6 +37,8 @@
                 <Button mnemonicParsing="false" onAction="#loadFromFile" text="Recargar" />
                 <Button mnemonicParsing="false" onAction="#onAddPerson" text="Agregar" />
                 <Button mnemonicParsing="false" onAction="#onUpdate" text="Actualizar" />
+                <Button mnemonicParsing="false" onAction="#OnDelete" text="Eliminar" />
+
             </children>
         </HBox>
 
