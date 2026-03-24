@@ -10,6 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/ControlIfElseAlanZarinana" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ControlSwitchAlanZarinana/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/demo/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/demolistview/src/main/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
