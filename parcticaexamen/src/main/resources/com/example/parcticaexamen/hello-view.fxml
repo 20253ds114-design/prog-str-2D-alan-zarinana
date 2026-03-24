@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15.0" xmlns="http://javafx.com/fxml/1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.parcticaexamen.controllers.AppController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label text="Registro de Contactos de Emergencia"/>
+
+    <GridPane hgap="10.0" vgap="10.0">
+        <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Teléfono (10 dígitos):" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="txtTelefono" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Parentesco:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <ComboBox fx:id="cbParentesco" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    </GridPane>
+
+    <HBox spacing="10.0" alignment="CENTER">
+        <Button text="Agregar" onAction="#btnAgregarClick" />
+        <Button text="Buscar" onAction="#btnBuscarClick" />
+        <Button text="Actualizar" onAction="#btnActualizarClick" />
+        <Button text="Eliminar" onAction="#btnEliminarClick" />
+        <Button text="Limpiar" onAction="#limpiar" />
+    </HBox>
+
+    <Separator />
+
+    <Label text="Contactos Registrados:" />
+    <ListView fx:id="lvContactos" prefHeight="200.0" />
+</VBox>
